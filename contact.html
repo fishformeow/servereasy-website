@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us | ServerEasy</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="validation.js" defer></script>
+    </head>
+    <body>
+
+        <header>
+            <div class="nav-container">
+                <a href="index.html" class="logo">ServerEasy</a>
+                <ul class="nav-links">
+                    <li><a href="about.html" class="active-link">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="docs.html">Help / Docs</a></li>
+                    <li><a href="client-portal.html" class="btn-login">Client Portal</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <nav class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <a href="about.html">About</a> &rsaquo; <span>Contact</span></nav>
+
+        <section class="page-hero">
+            <h1>Contact Us</h1>
+            <p>We reply in plain language, usually within a few hours.</p>
+        </section>
+        <section class="section">
+            <div class="checkout-layout">
+                <div class="card">
+                    <h3>Send us a message</h3>
+                    <p id="contact-success" class="form-success">Thanks! Your message has been sent — we'll reply within a few hours.</p>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full name</label>
+                            <input type="text" id="name" placeholder="Your name">
+                            <span class="field-error" id="err-name"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" placeholder="you@example.com">
+                            <span class="field-error" id="err-email"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="topic">What do you need help with?</label>
+                            <select id="topic">
+                                <option>Choosing a hosting plan</option>
+                                <option>On-site server setup</option>
+                                <option>An existing order</option>
+                                <option>Career Application</option>
+                                <option>Something else</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <input type="text" id="message" placeholder="Tell us what's going on">
+                            <span class="field-error" id="err-message"></span>
+                        </div>
+                        <a href="#" id="contact-submit" class="btn-primary" style="display:inline-block;">Send Message</a>
+                    </form>
+                </div>
+                <div class="summary-box">
+                    <h3>Other ways to reach us</h3>
+                    <div class="summary-line"><span>Email</span><span>help@servereasy.my</span></div>
+                    <div class="summary-line"><span>Phone</span><span>014-234 3848</span></div>
+                    <div class="summary-line"><span>Office Address</span><span>In the darkest pit of hell</span></div>
+                    <div class="summary-line"><span>Office Hours</span><span>Mon&ndash;Fri, 9am&ndash;6pm</span></div>
+                    <p style="margin-top:1rem; color:var(--gray); font-size:0.9rem;">Looking for troubleshooting help instead? Visit our <a href="docs.html" style="color:var(--primary);">Docs</a> section first &mdash; most answers are already there.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-container">
+                <p>&copy; 2026 ServerEasy. Making server tech accessible to all.</p>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </body>
+</html>

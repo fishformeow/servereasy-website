@@ -1,0 +1,611 @@
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --accent: #10b981;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --gray: #64748b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* Header / Navbar */
+header {
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.btn-login {
+    background: var(--primary);
+    color: white !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.btn-login:hover {
+    background: var(--primary-dark) !important;
+}
+
+/* Hero Section */
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+}
+
+.hero-content h1 span {
+    color: var(--primary);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--gray);
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-primary, .btn-secondary {
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-secondary:hover {
+    background: #eff6ff;
+}
+
+.hero-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--accent);
+}
+
+.hero-card h3 {
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.hero-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    color: var(--gray);
+}
+
+.hero-card li::before {
+    content: "✓ ";
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* Services & Products Section */
+.section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: var(--dark);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    color: var(--dark);
+    font-size: 1.3rem;
+}
+
+.card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.card a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Buttons keep their own text color even when placed inside a .card —
+   .card a above is more specific than .btn-primary/.btn-secondary alone,
+   so without this override button text becomes invisible on its own
+   background. */
+.card .btn-primary,
+.card .btn-secondary {
+    color: white;
+    font-weight: 600;
+}
+
+.card .btn-secondary {
+    color: var(--primary);
+}
+
+/* Footer */
+footer {
+    background: var(--dark);
+    color: #94a3b8;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* Other stuff */
+
+.over-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 60px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.services-container {
+    display: flex; 
+    flex-direction: column; 
+    gap: 3rem;
+}
+
+.service-row {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 3rem; 
+    align-items: center; 
+    background: white; 
+    padding: 2.5rem; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.service-visual {
+    background: var(--light); 
+    height: 250px; 
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: var(--gray); 
+    font-weight: 600; 
+    overflow: hidden;
+}
+
+.service-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* ==========================================================================
+   Additions for interior pages (About, Services sub-pages, Products,
+   Solutions, Docs, Checkout flow)
+   ========================================================================== */
+
+.active-link {
+    color: var(--primary) !important;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    max-width: 1200px;
+    margin: 1.2rem auto 0;
+    padding: 0 2rem;
+    font-size: 0.85rem;
+    color: var(--gray);
+}
+
+.breadcrumb a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Generic page hero (used on every interior page instead of a photo) */
+.page-hero {
+    background: linear-gradient(120deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.page-hero p {
+    font-size: 1.05rem;
+    opacity: 0.92;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* Two-column card grid variant */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Pricing / package cards (Hosting, On-Site Setup) */
+.plan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 2px solid transparent;
+}
+
+.pricing-card.featured {
+    border-color: var(--accent);
+}
+
+.pricing-card .price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1rem 0;
+}
+
+.feature-list {
+    list-style: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    color: var(--gray);
+    margin: 1.2rem 0;
+}
+
+.feature-list li::before {
+    content: "✓ ";
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* Multi-step checkout flow (Basic Plan configuration wireframe) */
+.step-tracker {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 0.5rem 0 2.5rem;
+}
+
+.step {
+    color: var(--gray);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.step.active {
+    color: var(--primary);
+}
+
+.step-sep {
+    color: #cbd5e1;
+}
+
+.checkout-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--dark);
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.7rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-group input.input-invalid,
+.form-group select.input-invalid {
+    border-color: #dc2626;
+    background: #fef2f2;
+}
+
+.field-error {
+    display: none;
+    color: #dc2626;
+    font-size: 0.82rem;
+}
+
+.field-error.visible {
+    display: block;
+}
+
+.form-success {
+    display: none;
+    background: #ecfdf5;
+    border: 1px solid var(--accent);
+    color: #047857;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+}
+
+.form-success.visible {
+    display: block;
+}
+
+/* Account step (login / create account tabs) */
+.auth-tabs {
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 1.5rem;
+}
+
+.auth-tab {
+    background: none;
+    border: none;
+    padding: 0.7rem 0.2rem;
+    margin-right: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    color: var(--gray);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+
+.auth-tab.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+.summary-box {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.summary-box h3 {
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eef2f7;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--dark);
+}
+
+/* FAQ */
+.faq-item {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    margin-bottom: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-item h3 {
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.faq-item p {
+    color: var(--gray);
+}
+
+/* Tutorials list */
+.tutorial-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tutorial-list li {
+    background: white;
+    padding: 1.2rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+    .checkout-layout {
+        grid-template-columns: 1fr;
+    }
+    .service-row {
+        grid-template-columns: 1fr !important;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: flex-end;
+    }
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+}

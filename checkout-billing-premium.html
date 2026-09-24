@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Payment & Billing – Premium Plan | ServerEasy</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="pricing.js" defer></script>
+        <script src="validation.js" defer></script>
+    </head>
+    <body>
+
+        <header>
+            <div class="nav-container">
+                <a href="index.html" class="logo">ServerEasy</a>
+                <ul class="nav-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html" class="active-link">Services</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="docs.html">Help / Docs</a></li>
+                    <li><a href="client-portal.html" class="btn-login">Client Portal</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <nav class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <a href="services.html">Services</a> &rsaquo; <a href="services-hosting.html">Hosting</a> &rsaquo; <a href="services-hosting-premium.html">Premium Plan</a> &rsaquo; <a href="checkout-account-premium.html">Account</a> &rsaquo; <span>Payment & Billing</span></nav>
+
+        <section class="section">
+            <h1 style="margin-bottom:0.3rem;">Premium Plan</h1>
+            <div class="step-tracker"><span class="step">1. Server Details</span><span class="step-sep">&rsaquo;</span><span class="step">2. Account</span><span class="step-sep">&rsaquo;</span><span class="step active">3. Payment & Billing</span><span class="step-sep">&rsaquo;</span><span class="step">4. Checkout</span></div>
+            <div class="checkout-layout">
+                <div class="card">
+                    <div class="form-group">
+                        <label for="cname">Name on Card</label>
+                        <input type="text" id="cname" placeholder="Full name">
+                        <span class="field-error" id="err-cname"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cnum">Card Number</label>
+                        <input type="text" id="cnum" placeholder="0000 0000 0000 0000" inputmode="numeric">
+                        <span class="field-error" id="err-cnum"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cexp">Expiry</label>
+                        <input type="text" id="cexp" placeholder="MM/YY" inputmode="numeric">
+                        <span class="field-error" id="err-cexp"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cbill">Billing Cycle</label>
+                        <select id="cbill">
+                            <option>Monthly</option>
+                            <option>Yearly (save 10%)</option>
+                        </select>
+                    </div>
+                    <a href="checkout-final-premium.html" id="billing-next" class="btn-primary" style="display:inline-block;">Next</a>
+                </div>
+                <div class="summary-box" data-sync-plan="Premium Plan">
+                    <h3 id="sum-total-title">RM94.90/month</h3>
+                    <div class="summary-line" id="sum-account-row" style="display:none;"><span>Account</span><span id="sum-account-email"></span></div>
+                    <div class="summary-line"><span>Premium Plan</span><span id="sum-plan-price">RM79.90</span></div>
+                    <div class="summary-line"><span id="sum-storage-label">Storage (6TB)</span><span id="sum-storage-price">RM10.00</span></div>
+                    <div class="summary-line"><span>Backup</span><span id="sum-backup-price">RM5.00</span></div>
+                    <div class="summary-total"><span>Total</span><span id="sum-total">RM94.90/mo</span></div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-container">
+                <p>&copy; 2026 ServerEasy. Making server tech accessible to all.</p>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </body>
+</html>

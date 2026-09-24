@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Checkout – Basic Plan | ServerEasy</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="pricing.js" defer></script>
+    </head>
+    <body>
+
+        <header>
+            <div class="nav-container">
+                <a href="index.html" class="logo">ServerEasy</a>
+                <ul class="nav-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html" class="active-link">Services</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="docs.html">Help / Docs</a></li>
+                    <li><a href="client-portal.html" class="btn-login">Client Portal</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <nav class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <a href="services.html">Services</a> &rsaquo; <a href="services-hosting.html">Hosting</a> &rsaquo; <a href="services-hosting-basic.html">Basic Plan</a> &rsaquo; <a href="checkout-account.html">Account</a> &rsaquo; <a href="checkout-billing.html">Payment & Billing</a> &rsaquo; <span>Checkout</span></nav>
+
+        <section class="section">
+            <h1 style="margin-bottom:0.3rem;">Basic Plan</h1>
+            <div class="step-tracker"><span class="step">1. Server Details</span><span class="step-sep">&rsaquo;</span><span class="step">2. Account</span><span class="step-sep">&rsaquo;</span><span class="step">3. Payment & Billing</span><span class="step-sep">&rsaquo;</span><span class="step active">4. Checkout</span></div>
+            <div class="card" data-sync-plan="Basic Plan" style="max-width:600px; margin:0 auto; text-align:center;">
+                <h3>You're all set!</h3>
+                <p style="margin:1rem 0;">Review your order below, then confirm to bring your server online.</p>
+                <div class="summary-line" id="sum-account-row" style="display:none;"><span>Account</span><span id="sum-account-email"></span></div>
+                <div class="summary-line"><span>Server Name</span><span id="sum-server-name">my-first-server</span></div>
+                <div class="summary-line"><span>Plan</span><span id="sum-plan">Basic</span></div>
+                <div class="summary-line"><span>Storage</span><span id="sum-storage">6TB</span></div>
+                <div class="summary-total"><span>Total</span><span id="sum-total">RM44.90/mo</span></div>
+                <a href="client-portal.html" class="btn-primary" style="display:inline-block; margin-top:1.5rem;">Confirm Order</a>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-container">
+                <p>&copy; 2026 ServerEasy. Making server tech accessible to all.</p>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </body>
+</html>
